@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/03d482d2bf.js" crossorigin="anonymous"></script>
+    <title>Hoteles</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top">
+      <a class="navbar-brand" href="#">Hoteles</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#mi-collapse"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mi-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="navbar-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="./about.html">Nosotros</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="./precios.html">Precios</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="./terminos-condiciones.html"
+              >Términos y condiciones</a
+            >
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="./contacto.html">Contactos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        <div class="img-grande">
+          <div class="jumbotron banner-container">  
+            <div class="img-banner">
+              <h2>Mejores hoteles</h2>
+              <h1>De Colombia</h1>
+            </div>   
+          </div>
+        </div>
+      
+    <div class="row container-uno">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+
+        <div id="carouselControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <P>PROMOCIÓN VALIDA <br> HASTA FINAL DEL MES... 30/07/2023</P>
+              <div class="img-carousel">
+                <div class="d-flex">
+                  <a class="ver-hotel" href="">Ver Hoteles de Cali</a>
+                  <span class="oi oi-info more-info-icon" data-bs-toggle="tooltip" title='Para reservar en este hotel, haz click en el boton "Reservar"'></span>
+                </div>
+                <img class="d-block w-100" src="img-hoteles/Hotel-4.jpg" alt="Primer slide">
+              </div>
+              
+            </div>
+            <div class="carousel-item">
+              <P>PROMOCIÓN VALIDA <br> HASTA FINAL DEL MES... 30/07/2023</P>
+              <div class="img-carousel">
+                <div class="d-flex">
+                  <a class="ver-hotel" href="">Ver Hoteles de Bogota</a>
+                  <span class="oi oi-info more-info-icon" data-bs-toggle="tooltip" title='Para reservar en este hotel, haz click en el boton "Reservar"'></span>
+                </div>
+                <img class="d-block w-100" src="img-hoteles/Hotel-5.jpg" alt="Segundo slide">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <P>PROMOCIÓN VALIDA <br> HASTA FINAL DEL MES... 30/07/2023</P>
+              <div class="img-carousel">
+                <div class="d-flex">
+                  <a class="ver-hotel" href="">Ver Hoteles de Medellin</a>
+                  <span class="oi oi-info more-info-icon" data-bs-toggle="tooltip" title='Para reservar en este hotel, haz click en el boton "Reservar"'></span>
+                </div>
+                <img class="d-block w-100" src="img-hoteles/Hotel-6.jpg" alt="Tercer slide">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <P>PROMOCIÓN VALIDA <br> HASTA FINAL DEL MES... 30/07/2023</P>
+              <div class="img-carousel">
+                <div class="d-flex">
+                  <a class="ver-hotel" href="">Ver Hoteles de Barranquilla</a>
+                  <span class="oi oi-info more-info-icon" data-bs-toggle="tooltip" title='Para reservar en este hotel, haz click en el boton "Reservar"'></span>
+                </div>
+                <img class="d-block w-100" src="img-hoteles/Hotel-7.jpg" alt="Cuarto slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </a>
+          </div>
+        </div><div class="row container-collapse1">
+        <div class="btn-collapse col-sm-3">
+          <button class="btn btn-descripcion" type="button" data-toggle="collapse" data-target="#funciona" aria-expanded="false" aria-controls="multiCollapse1">¿Cómo funciona?</button>
+        </div>
+
+        <div class="btn-collapse col-sm-3">
+          <button class="btn btn-descripcion" type="button" data-toggle="collapse" data-target="#reserva" aria-expanded="false" aria-controls="multiCollapse2">¿Dónde reservar?</button>
+        </div>
+
+        <div class="btn-collapse col-sm-3">
+          <button class="btn btn-descripcion" type="button" data-toggle="collapse" data-target="#pago" aria-expanded="false" aria-controls="multiCollapse3">¿Cómo pago?</button>
+        </div>
+      </div>  
+
+      <div class="row container-collapse2">
+        <!-- <div class="row-3 menu-container d-flex flex-row justify-content-between">   -->
+        <div class="col-3 descripcion-hoteles collapse multi-collapse" id="funciona">
+          <h3>¿Cómo funciona?</h3>
+          <p>Busca los hoteles de acuerdo a tu preferencia.</p>
+        </div>
+
+        <div class="col-3 descripcion-hoteles collapse multi-collapse" id="reserva">
+          <h3>¿Dónde puedo reservar?</h3>
+          <p>
+            Elegiras la ciudad que te interese y luego realiza la reserva con
+            tus datos.
+          </p>
+        </div>
+
+        <div class="col-3 descripcion-hoteles collapse multi-collapse" id="pago">
+          <h3>¿Cómo pago?</h3>
+          <p>Utiliza tu terjeta favorita para realizar el pago</p>
+        </div>
+      </div>
+      
+    </div><div class="borde-bottom"></div><div class="col-1 d-flex flex-column titulo-informativo">
+      <h5>Los mejores Hoteles a nivel nacional</h5>
+    </div>
+    <div class="d-flex flex-wrap mi-container">
+      <div class="card-hoteles d-flex flex-column justify-content-between">
+        <img
+          src="img-hoteles/img-default.jpg"
+          class="card-img-top"
+          alt="Responsive image"
+        />
+        <div>
+          <h4 data-toggle="tooltip" data-placement="top" title="Las primeras reservas cuenta con clases de Tango gratis!">Hoteles Cali</h4>
+          <p>
+            Hotel ubicado en pleno centro de Ciudad de cali a pocos metros de la
+            iglesia ermita.
+          </p>
+        </div>
+          <button type="button" class="btn btn-comprar btn-contacto btn-degradado" data-toggle="modal" data-toggle="popover" title="EN PROMOCIONES" data-content="Consultá las promociones vigentes!" data-target="#reservar">
+            <span></span>Reservar
+          </button>
+      </div>
+
+      <div class="card-hoteles d-flex flex-column justify-content-between">
+        <img
+          src="img-hoteles/img-default2.jpg"
+          class="card-img-top"
+          alt="Responsive image"
+        />
+        <div>
+          <h4 data-toggle="tooltip" data-placement="top" title="Tus reservas cuentan con alimentación gratis!">Hoteles Bogota</h4>
+          <p>
+            Este Hotel se encuentra ubicado muy cerca de la terminal del salitre
+            cuenta con amplias habitaciones.
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-comprar btn-contacto btn-degradado" data-toggle="modal" data-toggle="popover" title="EN PROMOCIONES" data-content="Consultá las promociones vigentes!" data-target="#reservar">
+          <span></span>Reservar 
+        </button>
+  
+      </div>
+
+      <div class="card-hoteles d-flex flex-column justify-content-between">
+        <img
+          src="img-hoteles/img-default3.jpg"
+          class="card-img-top"
+          alt="Responsive image"
+        />
+        <div>
+          <h4 data-toggle="tooltip" data-placement="top" title="Reserva ya cuentas con el 50% de descuento!">Hoteles Medellin</h4>
+          <p>
+            Uno de los Hoteles mas lujosos de la ciudad de medellin con exelente
+            ubicacion estrato 6 y zonas comerciales.
+          </p>
+        </div>
+        <button type="button" class="btn btn-comprar btn-contacto btn-degradado" data-toggle="modal" data-toggle="popover" title="EN PROMOCIONES" data-content="Consultá las promociones vigentes!" data-target="#reservar">
+          <span></span>Reservar
+        </button>
+  
+      </div>
+      <div class="card-hoteles d-flex flex-column justify-content-between">
+        <img
+          src="img-hoteles/img-default4.jpg"
+          class="card-img-top"
+          alt="Responsive image"
+        />
+        <div>
+          <h4 data-toggle="tooltip" data-placement="top" title="Promoción reservas del 23 de Julio al 30 de Julio">Hoteles Barranquilla</h4>
+          <p>
+            Hotel ubicacion al norte de la ciudad estrato 5 difrentes
+            alternativas de facil transporte.
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-comprar btn-contacto btn-degradado" data-toggle="modal" data-toggle="popover" title="EN PROMOCIONES" data-content="Consultá las promociones vigentes!" data-target="#reservar">
+          <span></span>Reservar
+        </button>
+  
+      </div>
+
+      <div class="card-hoteles d-flex flex-column justify-content-between">
+        <img
+          src="img-hoteles/img-default5.jpg"
+          class="card-img-top"
+          alt="Responsive image"
+        />
+        <div>
+          <h4>Hoteles Cartagena</h4>
+          <p>
+            Hotel ubicado cerca a la mejor playa de la ciudad con muchos puntos
+            de comercio a sus alrededores.
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-comprar btn-contacto btn-degradado" data-toggle="modal" data-target="#reservar">
+          <span></span>Reservar
+        </button>
+  
+      </div>
+
+      <div class="card-hoteles d-flex flex-column justify-content-between">
+        <img
+          src="img-hoteles/img-default6.jpg"
+          class="card-img-top"
+          alt="Responsive image"
+        />
+        <div>
+          <h4>Hoteles Manizales</h4>
+          <p>
+            Hotel lujoso el mejor de la ciudad ubicado cerca a comerciales y muy
+            cerca a la terminar de transporte de la ciudad.
+          </p>
+          
+        </div>
+
+        <button type="button" class="btn btn-comprar btn-contacto btn-degradado" data-toggle="modal" data-target="#reservar">
+          <span></span>Reservar
+        </button>
+  
+      </div>
+
+      <div class="card-hoteles d-flex flex-column justify-content-between">
+        <img
+          src="img-hoteles/img-default7.jpg"
+          class="card-img-top"
+          alt="Responsive image"
+        />
+        <div>
+          <h4>San Andrés</h4>
+          <p>
+            El Hotel queda muy cerca ubicado frente a las mejores playas de la
+            ciudad con exelentes restaurantes tipos de comidas del Mar.
+          </p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-comprar btn-contacto btn-degradado" data-toggle="modal" data-target="#reservar">
+            <span></span>Reservar
+          </button>
+    
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="reservar" tabindex="-1" role="dialog" aria-labelledby="exampleModallabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModallabel">Reservar Hotel</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="n-alinear col-form-label">Numero de personas:</label>
+                <input type="number" class="form-control n-personas" id="personas">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="n-alinear col-form-label">Telefono:</label>
+                <input type="tel" class="form-control n-telefono" id="telefono">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="n-alinear col-form-label">Numero de habitaciones:</label>
+                <input type="number" class="form-control n-habitaciones" id="habitaciones">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="n-alinear col-form-label">Hora y Fecha de salida:</label>
+                <input type="time" class="form-control n-salida" id="h-salida">
+                <input type="date" class="form-control n-salida" id="f-salida">     
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="n-alinear col-form-label">Alimentación [si o no]:</label>
+                <input type="checkbox" class="form-control n-marcador-check" id="marcador-chek">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class=" n-alinear col-form-label">Tipo Estilo y Descripción de Habitación:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-contacto">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModallabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModallabel">Contacto con el Hotel</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Tu email:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Mensaje:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-contacto">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer p-4 row">
+          <div class="col-sm-4 d-flex flex-column">
+              <h6 class="item-footer">Nuestras redes sociales</h6>
+              <a class="item-footer" href="https://www.facebook.com">Facebook</a>
+              <a class="item-footer" href="https://www.youtube.com">Youtube</a>
+              <a class="item-footer" href="https://twitter.com">Twitter</a>
+          </div>
+          <div class="col-sm-4 d-flex flex-column align-items-center">
+              <address>
+                  <h4>Nuestas oficinas</h4>
+                  <p><span class="oi oi-phone icon-footer"></span>+57316498621</p>
+                  <p><span class="oi oi-home icon-footer"></span>Cll 4, cr 15, barrio La Moral</p>
+                  <p><span class="oi oi-envelope-closed icon-footer"></span>hoteles@gmail.com</p> 
+              </address>
+          </div>
+          <div class="col-sm-4 d-flex flex-column align-items-end">
+              <a class="item-footer" href="https://www.facebook.com">Sobre nosotros</a>
+              <a class="item-footer" href="https://www.youtube.com">Terminos y condicones</a>
+              <a class="item-footer" href="https://twitter.com">Contactenos</a>
+          </div>
+      </div>
+  </footer>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="node_modules/bootstrap.js/dist/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+          $("[data-bs-toggle='tooltip']").tooltip();
+          $("[data-bs-toggle='popover']").popover();
+      })
+  </script>
+  </body>
+</html>

@@ -1,0 +1,1326 @@
+//________VARIABLES CSS________
+$yellow: rgb(255, 253, 117);
+$sapote: rgb(255, 175, 26);
+$green: rgb(50, 238, 245);
+$blue_cielo: rgb(202, 239, 255);
+$blue_body: rgb(23, 61, 75);
+$blue_container: rgb(12, 91, 110);
+$blue_title: linear-gradient(rgb(12, 91, 110), rgb(170, 253, 253));
+
+$color-degradado: linear-gradient(rgb(12, 91, 110), rgb(170, 253, 253));
+$color-degradado-b-c: linear-gradient(rgb(12, 91, 110), rgb(11, 223, 223));
+
+$green_btn_nav: rgb(95, 158, 160);
+$green_agua_marina: rgb(16, 168, 168);
+$green_border: rgb(50, 238, 245);
+
+$border_sombra: (
+  box-shadow(-1px 2px 20px 0px #1d1f1fe6)
+);
+
+$header_frm: background-color #0b535f9c;
+$body_frm: background-color #1675869c;
+
+$white_text_frm: beige;
+$white_text: aliceblue;
+
+$margin_container: margin(0px 21% 14% 21%);
+$padding_container: padding(0px 20px 0px 20px);
+
+//sass --watch styles.scss styles.css
+
+$font_family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+//_______MIXINS MARGENES PERSONALIZADO_______
+@mixin margin-container($top_c, $left_c, $bottom_c, $right_c) {
+  margin-top: $top_c;
+  margin-right: $right_c;
+  margin-bottom: $bottom_c;
+  margin-left: $left_c;
+}
+
+//_______MIXINS PERSONALIZADO_______
+@mixin barra_navegacion($blue_container: rgb(12, 91, 110)) {
+  height: 10vh;
+  background-color: $blue_container;
+  padding: 0px 0px 0px 15px;
+}
+
+//_______MIXINS CONTAINER PERSONALIZADO_______
+@mixin contenedor($blue_cont, $margin_cont, $padding_cont) {
+  width: auto;
+  display: flex;
+
+  box-shadow: -1px 2px 20px 0px #1d1f1fe6;
+  height: 267px;
+
+  background-color: $blue_cont;
+  margin: $margin_cont;
+  padding: $padding_cont;
+
+  // margin: 150PX;
+
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+//_____________________/
+
+
+//_______MIXINS JUMBOTRON PERSONALIZADO_______
+@mixin titulo_jumbotron($blue_cielo: rgb(202, 239, 255)) {
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+
+  color: rgb(11, 66, 70);
+  background-color: $blue_cielo;
+  font-family: 'Times New Roman', Times, serif;
+
+  position: sticky;
+  top: 57px;
+
+  height: 7vh;
+  margin: 0px 0% 0% 0%;
+  padding: 5px 0px 5px 0px;
+
+  z-index: 500;
+  /* text-transform: uppercase; */
+}
+
+//________________________________/
+
+
+//_______MIXINS INFORMACION DEL FOOTER_______//
+@mixin footer-td($blue_container) {}
+
+//-----------------------------------/
+
+* {
+  /*___PARA QUE NO SE SUME EL TAMAÑO DE PADDING Y MARGIN TODOS___*/
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font_family;
+}
+
+body {
+  background-color: $blue_body;
+}
+
+//_______________________________/
+
+
+//_______MI CONTAINER_______//
+.mi-container {
+  @include contenedor($blue_container, $margin_container, $padding_container);
+  @include margin-container(0px, 21%, 11%, 21%);
+
+  overflow: scroll;
+}
+
+//________________________________/
+
+//________BARRA SCROLLBAR________//
+.mi-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.mi-container::-webkit-scrollbar-thumb {
+  background-color: rgba(235, 235, 82, 0.829);
+  border-radius: 4px;
+}
+
+.mi-container::-webkit-scrollbar-thumb:hover {
+  background-color: $sapote;
+}
+
+//________________________________/
+
+
+
+//sass --watch styles.scss styles.css
+
+// .navbar {
+//   height: 10vh;
+//   background-color: $blue_container;
+//   padding: 0px 0px 0px 15px;
+// }
+
+
+//___BARRA DE NAVEGACION___//
+.navbar {
+  @include barra_navegacion();
+
+  div .navbar-item a {
+    color: $white_text;
+    font-size: 13px;
+    min-width: 10vh;
+    width: auto;
+
+    // text-align: center;
+    background-color: $green_btn_nav;
+
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $green;
+
+    margin: 17px 7px 15px 0px;
+    padding: 2px 0px 10px 0px;
+    height: 25px;
+  }
+
+  .navbar-brand {
+    color: $white_text;
+  }
+
+  .navbar-item a:hover {
+    background-color: #03203a5d;
+    color: $yellow;
+  }
+}
+
+//___TAMAÑO Y COLOR PARA BOTON COLLAPSE___//
+button span.navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: -7px;
+  background-color: $white_text;
+
+}
+
+button.navbar-toggler {
+  width: 30px;
+  margin-right: 10px;
+}
+
+//_______________________/
+
+
+//___IMAGEN BANNER___//
+.img-grande {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  margin: 40px 0px 0px 0px;
+  background-size: cover;
+}
+
+//___BOTON Y TEXTO EN BANNER___//
+.banner-container {
+  display: flex;
+  margin-top: 0px;
+
+  .img-banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 0px 0px 0px 0px;
+    margin: -190px 0px 0px 50px;
+
+    H1 {
+      color: $white_text;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    h2 {
+      color: rgb(12, 36, 39);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    button {
+      color: $white_text;
+      background-color: #1dac81d2;
+      border-radius: 5px;
+    }
+  }
+}
+
+//__________________________________/
+
+
+.jumbotron {
+  @include titulo_jumbotron();
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .buscador {
+    width: auto;
+    display: flex;
+    /* justify-content: flex-end; */
+    margin: 0px 0px 0px 0px;
+    padding: 0px 10px 0px 10px;
+
+    /* position: fixed; */
+    input {
+      width: 152px;
+      height: 30px;
+      padding: 0px 0px 0px 7px;
+      margin: 0% 0% 0% 0%;
+      color: rgb(4, 46, 66);
+      background-color: $white_text;
+
+      position: fixed;
+      top: 78px;
+      left: 94%;
+      transform: translate(-70%, -40%);
+
+      border-radius: 7px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $green;
+    }
+  }
+}
+
+//_______________________/
+
+
+.breadcrumb {
+  width: auto;
+  background-color: $white_text;
+
+  padding: 0px 0px 0px 10px;
+  margin: 0% 5% 2% 5%;
+
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $green;
+}
+
+//___CARROUSEL___//
+.ver-descuento {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #fffc62;
+  text-decoration: none;
+  /* font-weight: bold; */
+  /* opacity: 70%; */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.ver-hotel {
+  display: flex;
+  text-align: center;
+
+  font-size: 30px;
+  color: rgb(193, 255, 250);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  /* margin: 0px; */
+  padding: 0px 0px 0px 5px;
+}
+
+.carousel-item p {
+  position: absolute;
+  /* text-align: center; */
+
+  font-size: 12px;
+  color: $green;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  padding: 200px 0px 5px 10px;
+}
+
+#carouselControls {
+  border-radius: 3px;
+  border-color: $green;
+  margin: 0px 35px 0% 35px;
+  background-color: rgb(40, 104, 128);
+  box-shadow: -1px 2px 20px 0px #1d1f1fe6;
+
+  height: 390px;
+}
+
+.img-carousel {
+  height: 350px;
+  /* opacity: 90%; */
+  margin: 0px 1px 10px 1px;
+
+  img {
+    object-fit: cover;
+    /* filter: drop-shadow(24px 26px 12px rgb(255, 113, 18)); */
+    /* background-image: var(--color-degradado); */
+  }
+
+  .slide {
+    animation: slide 5ms infinite alternate ease-in-out;
+  }
+}
+
+
+//_________________________________________________________/
+
+
+//_____CONTENEDOR UNO_____//
+.container-uno {
+  width: auto;
+  display: flex;
+  padding: 0px 0px 0px 0px;
+  /* margin: 65px 23% 0% 23%; */
+  margin: 65px 23% 0% 23%;
+
+  h3 {
+    color: #ffaf1a;
+  }
+
+  // container-collapse1
+  // container-collapse2
+}
+
+.cotizar-hotel {
+  width: auto;
+  // height: 90px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  margin: 0px 71px 0px 71px;
+  padding-bottom: 20px;
+
+  z-index: 1;
+  position: sticky;
+  top: 100px;
+  border-radius: 3px;
+  // border: #ffaf1a;
+  // background-image: $color-degradado;
+
+  background-color: $white_text;
+  // box-shadow: -1px 2px 5px 0px #8a8b8be6;
+
+  .buscar,
+  .n-llegada,
+  .n-salida,
+  .n-personas,
+  .n-habitaciones {
+    border-radius: 15px;
+
+    cursor: pointer;
+    // border: none;
+    border-width: 1px;
+    border-style: solid;
+    // border-color: $green;
+  }
+
+  label.n-alinear {
+    // color: $green;
+  }
+
+  .cotiza {
+    margin-top: 10px;
+  }
+
+  .n-personas,
+  .n-habitaciones {
+    width: 90px;
+  }
+
+  .n-alinear {
+    color: $green_agua_marina;
+    // margin: 0px 0px 10px 30px;
+  }
+
+  .buscador-hotel {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    .buscar {
+      background-color: #96dcf8;
+      margin-left: 30px;
+    }
+
+    input {
+      width: 130px;
+      // height: 40px;
+      font-size: 17px;
+      text-align: center;
+      background-color: $blue_container;
+      color: $white_text;
+
+      margin-left: 28px;
+    }
+  }
+
+}
+
+//________________________/
+
+
+//___BOTONES COLLAPSE Y DESCRIPCION___//
+.container-collapse1 {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+
+  margin: 13% 0% 2% 0%;
+
+  .btn-collapse {
+    margin: 10px 0px 10px 0px;
+
+    button {
+      padding: 0px;
+    }
+  }
+}
+
+
+// descripcion-hoteles
+
+.container-collapse2 {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+
+  padding: 0px 0px 0px 30px;
+  margin: 2% 0% 0% 0%;
+
+  .descripcion-hoteles {
+    flex: 140px;
+  }
+
+  .descripcion-hoteles h3 {
+    flex: 150px
+  }
+
+  .descripcion-hoteles p {
+    color: $green;
+  }
+}
+
+//_________________________/
+
+
+//___LINEA BORDE___//
+.borde-bottom {
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-color: $white_text;
+
+  margin: 10px 26% 10% 26%;
+}
+
+//__________________________/
+
+
+//_____TITULO INFORMATIVO CONTAINER TARJETAS_____ //
+.titulo-informativo {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white_text;
+  font-weight: bold;
+
+  background-image: $color-degradado;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  border-width: 1px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  /* height: 27PX; */
+  height: 50px;
+  margin: 0px 21% 0px 21%;
+
+  h5 {
+    font-size: 19px;
+  }
+}
+
+//______________________/
+
+
+// -----------------------------------------------------------------------ABOUT
+.titulo-nuestra-historia {
+  width: auto;
+  align-items: center;
+  color: #ffffff;
+  background-image: $color-degradado;
+  margin: 150px 27% 0% 27%;
+
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+//___CONTAINER ABOUT___//
+.container-about {
+  @include contenedor($blue_container, (2px 27% 0% 27%), (15px 15px 20px 15px));
+  width: auto;
+  display: flex;
+
+  height: 65vh;
+  color: aliceblue;
+  border-radius: 2px;
+
+  // overflow: scroll;
+}
+
+// -------------------------------------------------------------CONTACTOS
+.titulo-comentarios {
+  width: auto;
+  align-items: center;
+
+  margin: 130px 27% 5px 27%;
+  color: #ffffff;
+  background-image: $color-degradado;
+
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+//___CONTAINER CONTACTO___//
+.container-contacto {
+  @include contenedor($blue_container, (-3px 27% 0% 27%), (15px 15px 20px 15px));
+  width: auto;
+  display: flex;
+
+  height: 677px;
+  color: aliceblue;
+  border-radius: 3px;
+}
+
+//___FORMULARIO CONTACTO___//
+form {
+
+  .form-group {
+    margin-bottom: 5px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .form-control {
+    height: 25px;
+    color: rgb(4, 112, 112);
+    background-color: $blue_cielo;
+  }
+
+  .form-control.control-check {
+    height: 34px;
+    color: rgb(4, 112, 112);
+  }
+
+  .form-control.mensaje-comentario {
+    height: 90px;
+    color: rgb(150, 255, 255);
+    color: rgb(4, 112, 112);
+  }
+
+  .gridCheck {
+    color: #65f1da;
+  }
+}
+
+// HTML
+// maxlength="10"
+
+// min="5"
+
+// pattern="[0-9]{3}"
+
+// CSS
+// input:invalid
+
+//________________________________/
+
+
+
+// //___EVENTO BONES COLLAPSE___//
+// form button.btn {
+//   height: 30px;
+//   margin-top: 25px;
+//   padding-top: 2px;
+//   text-align: center;
+//   color: rgb(150, 255, 255);
+//   border-color: rgb(19, 216, 216);
+//   // background-color: $color-degradado;
+// }
+
+// form button.btn:hover {
+//   color: rgb(250, 253, 32);
+//   // background-color: cadetblue;
+//   // background-image: $color-degradado;
+//   border-color: $green_border;
+// }
+
+// //______________________________/
+
+
+// ---------------------------------------------------------------------PRECIOS
+.titulo-precios {
+  width: auto;
+  align-items: center;
+  color: #ffffff;
+  background-image: $color-degradado;
+  margin: 120px 20% 0% 20%;
+
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+//___CONTAINER PRECIOS___//
+.container-precios {
+  @include contenedor($blue_container, (2px 20% 0% 20%), (15px 15px 20px 15px));
+  width: auto;
+  display: flex;
+  color: aliceblue;
+
+  height: auto;
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+//____________________/
+
+
+.nav-tabs {
+  padding: 0px 0px 5px 10px;
+  margin-bottom: 15px;
+}
+
+.nav-tabs li a {
+  color: #96dcf8;
+  margin-left: 10px;
+}
+
+.tarjeta-aceptada {
+  margin: 20px 0px 0px 0px;
+}
+
+.card-body {
+  color: #085669;
+  color: #ffffff;
+  background-color: cadetblue;
+
+  z-index: 10;
+
+  font-style: oblique
+}
+
+.card-header button {
+  color: rgb(7, 143, 125);
+  color: $blue_cielo;
+}
+
+.accordion {
+  z-index: 1;
+}
+
+//_______________/
+
+
+//___BOTONES CONTACTO TARJETA___//
+.btn.btn-link:hover {
+  color: $yellow;
+  border-color: $green_agua_marina;
+  background-image: $color-degradado;
+}
+
+// .btn-degradado:hover {
+//   color: $white_text;
+//   border-color: $green_agua_marina;
+// }
+
+
+// -------------------------------------------------------------TERMINOS CONDICIONES
+.titulo-term-condi {
+  width: auto;
+  align-items: center;
+  color: #ffffff;
+  background-image: $color-degradado;
+  margin: 130px 27% 0% 27%;
+
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+//___CONTAINER TERMINOS Y CONDICIONES___//
+.container-term-condi {
+  @include contenedor($blue_container, (2px 27% 0% 27%), (15px 15px 20px 15px));
+  width: auto;
+  display: flex;
+
+  height: auto;
+  color: aliceblue;
+  border-radius: 2px;
+
+  nav ol {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .img-term-condi {
+    margin-bottom: 15px;
+  }
+}
+
+//_____ANIMACION PARA IMAGEN_____//
+.card-img-top {
+  height: 90px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-img-top:hover {
+  // box-shadow: 0 0.1rem 0.4rem rgb(200, 237, 241,0.9);
+}
+
+//___TARJETA HOTELES CONTAINER DOS___//
+.card-hoteles {
+  flex: 150px;
+  padding: 10px 5px 2px 5px;
+  margin: 10px 3px 10px 3px;
+
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: $green;
+}
+
+.mi-container p {
+  color: $white_text;
+}
+
+.card-hoteles h4 {
+  /* color: darkseagreen; */
+  width: 110px;
+  color: $yellow;
+}
+
+.card-hoteles p {
+  height: 60%;
+}
+
+//__________________/
+
+
+//___BOTONES CONTAINER  UNO___//
+.btn {
+  color: $white_text;
+  background-color: $green_agua_marina;
+  margin: 10px 0px 5px 0px;
+
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn-comprar span.oi {
+  /* width: 5px; */
+  padding-right: 10px;
+}
+
+.btn-descripcion.btn:hover {
+  color: $yellow;
+  border-color: $green_agua_marina;
+}
+
+.btn:hover {
+  // color: $yellow;
+  color: $white_text;
+  border-color: $green_agua_marina;
+}
+
+//_____________________________________//
+
+
+
+// _____BOTON CONTACTO FRM_____ //
+.btn-contacto {
+  margin-top: 10px;
+  color: $yellow;
+  background-color: rgba(12, 134, 134, 0.726);
+  background-image: $color-degradado;
+
+  transition: 0.5s;
+
+  padding: 3px 50px;
+  width: 100%;
+  border-radius: 5px;
+  border-color: $green_border;
+}
+
+.modal-footer button.btn-contacto:hover {
+  color: $white_text_frm;
+  background-color: rgba(12, 134, 134, 0.726);
+  background-color: rgba(22, 117, 134, 0.612);
+  transition: 0.5s;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+
+
+//___FORMULARIO MODAL___//
+.form-group {
+  margin-bottom: 5px;
+}
+
+.modal-content {
+  background-color: #0b535f9c;
+}
+
+.modal-header {
+  background-color: #1675869c;
+}
+
+.modal-title {
+  color: $white_text_frm;
+  font-weight: bold;
+}
+
+.col-form-label {
+  color: $white_text_frm;
+  color: $yellow;
+  padding-bottom: 0px;
+}
+
+.form-control {
+  /* width: auto; */
+  background-color: rgb(12, 91, 110);
+}
+
+#recipient-name {
+  color: $white_text_frm;
+  background-color: rgb(12, 91, 110);
+}
+
+#message-text {
+  color: $white_text_frm;
+  background-color: rgb(12, 91, 110);
+}
+
+//_______________________________________/
+
+
+
+//___FORMULARIO MODAL DOS___//
+.color-fondo {
+  display: flex;
+
+  color: $white_text_frm;
+  text-align: center;
+  background-color: #1675869c;
+  margin-left: 30px;
+
+  border-color: $white_text_frm;
+}
+
+.n-alinear {
+  margin-left: 30px;
+}
+
+#h-salida {
+  margin-bottom: 10px;
+}
+
+//________________________/
+
+
+//___TITULO CONTACTO HOTEL___//
+.contacto-hotel {
+  width: auto;
+  align-items: center;
+  /* height: 27PX; */
+  padding: 0% 0% 0% 0%;
+  color: $white_text;
+  background-image: $color-degradado;
+  margin: 2% 10% 0% 10%;
+
+  .contacto-hotel h5 {
+    font-size: 17px;
+  }
+}
+
+//________________________/
+
+
+
+//_______INFORMACION DEL FOOTER_______//
+footer {
+  /* display: grid;
+  grid-template-columns: 100px auto 100px; */
+  background-color: $blue_container;
+  margin: 0% 3% 0% 3%;
+  padding: 1% 1% 0% 1%;
+  // }
+
+  .redes-sociales {
+    margin-top: 2%;
+
+    a {
+      color: $yellow;
+    }
+  }
+
+  address h4 {
+    margin-left: 10%;
+    color: darkseagreen;
+  }
+
+  .direccion {
+    line-height: 14px;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .footer-address-icon {
+    padding-right: 10px;
+  }
+
+  .info-direccion {
+    color: $green;
+
+    padding: 0% 0% 0% 0%;
+    text-align: left;
+    /* line-height: 7px; */
+  }
+
+  .info-quienes-somos {
+    margin-top: 2%;
+
+    a {
+      color: #66ff0d;
+      text-align: right;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//________________________/
+
+
+//_____CONTAINER TIPO GRID_____//
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 0px 3% 3% 3%;
+  padding: 0% 2% 0% 2%;
+  background-color: #03203a5d;
+
+  div {
+    color: $white_text_frm;
+    /* height: 53px; */
+    height: auto;
+    font-size: 10px;
+  }
+
+  strong {
+    color: $green;
+  }
+
+  div p {
+    text-align: left;
+    padding: 5px 10px 0px 50px;
+  }
+}
+
+//_______________________________/
+
+
+//_____FOOTER FINAL_____//
+.footer-final {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: rgba(3, 26, 44, 0.555);
+
+  margin: 0px 0% 0% 0%;
+  padding: 0% 0% 0% 1%;
+
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+
+  p {
+    display: flex;
+    color: $white_text_frm;
+    padding: 5px 0px 0px 0px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+//_____________________________________________________/
+
+
+
+//sass --watch styles.scss styles.css
+
+
+
+//___________MEDIA QUERY ESCRITORIO___________//
+//----------------------------------
+// @media screen and (max-width:768px) {
+
+//   .img-grande {
+//     width: 814px;
+//   }
+
+//   .jumbotron {
+//     width: 814px;
+//     height: 47px;
+//     position: sticky;
+//     top: 50px;
+//   }
+
+//   .cotizar-hotel {
+//     width: 680px;
+//     background-color: $blue_body;
+//     box-shadow: -1px 2px 20px 0px #1d1f1fe6;
+
+//     position: sticky;
+//     top: 120px;
+//   }
+
+//   .container-uno,
+//   .container-about,
+//   .container-term-condi {
+//     width: 600px;
+//     margin-left: 85px;
+//   }
+
+//   .borde-bottom {
+//     width: 500px;
+//     margin-bottom: 40px;
+//   }
+
+//   //______________________//
+
+
+//   .titulo-term-condi,
+//   .titulo-nuestra-historia {
+//     width: 600px;
+//     margin-left: 85px;
+
+//   }
+
+//   .titulo-informativo {
+//     width: 640px;
+//     margin-left: 65px;
+//   }
+
+//   .mi-container {
+//     width: 640px;
+//     margin-left: 65px;
+//     margin-bottom: 200px;
+//   }
+// }
+
+// .container-collapse1 {
+//   width: 640px;
+//   margin-top: 30px;
+// }
+
+//________________/
+
+
+//___MEDIA QUERY MEDIA PARA TABLES___//
+@media screen and (max-width:700px) {
+  .container-uno {
+    margin: 0% 4% 0% 4%;
+  }
+
+  .container-collapse1 {
+    margin: 0% 4% 0% 4%;
+    margin-top: 30px;
+  }
+}
+
+//___MEDIA QUERY MEDIA PARA TABLES___//
+@media screen and (max-width:480px) {
+
+  * {
+    //PARA QUE NO SE SUME EL TAMAÑO DE PADDING Y MARGIN TODOS
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .buscador {
+    margin-top: 100px;
+  }
+
+  .img-grande {
+    width: 814px;
+  }
+
+  .jumbotron {
+    width: 814px;
+    height: 47px;
+    position: sticky;
+    top: 71px;
+  }
+
+  .cotizar-hotel {
+    width: 680px;
+    background-color: $blue_body;
+    box-shadow: -1px 2px 20px 0px #1d1f1fe6;
+
+    position: sticky;
+    top: 120px;
+  }
+
+
+  .container-uno {
+    width: 680px;
+    margin-bottom: 50px;
+  }
+
+  .container-collapse1 {
+    width: 660px;
+    margin-top: 30px;
+  }
+
+  .btn-collapse {}
+
+  .borde-bottom {
+    width: 680px;
+    margin-bottom: 40px;
+  }
+
+  .titulo-informativo {
+    width: 680px;
+  }
+
+  .mi-container {
+    width: 680px;
+    margin-bottom: 200px;
+  }
+
+  .contacto-hotel {
+    width: 730px;
+  }
+
+  footer {
+    width: 790px;
+  }
+
+  .grid-container {
+    width: 790px;
+  }
+
+  .breadcrumb {}
+}
+
+//________________/
+
+
+//_____DISPOSITIVOS MOVILES_____//
+@media screen and (max-width: 300px) {
+
+  * {
+    //PARA QUE NO SE SUME EL TAMAÑO DE PADDING Y MARGIN TODOS
+    box-sizing: border-box;
+  }
+
+  html {
+    // background-color: #66ff0d;
+    // width: 100%;
+  }
+
+  body {
+    min-width: 100%;
+    // width: 100%;
+    // left: 0;
+    // right: 0;
+    // display: flex;
+    // justify-content: center;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    width: 542px;
+  }
+
+  .buscador {
+    margin-top: 100px;
+  }
+
+  .img-grande {
+    width: 542px;
+  }
+
+  .jumbotron {
+    width: 542px;
+  }
+
+  .cotizar-hotel {
+    width: 420px;
+    background-color: $blue_body;
+    // box-shadow: -1px 2px 20px 0px #1d1f1fe6
+
+    position: sticky;
+    top: 120px;
+  }
+
+  .container-uno {
+    width: 520px;
+    margin-bottom: 50px;
+  }
+
+  .container-collapse1 {
+    width: 460px;
+    margin-top: 30px;
+  }
+
+  .btn-collapse {}
+
+  .borde-bottom {
+    width: 405px;
+    margin-bottom: 40px;
+  }
+
+  .titulo-informativo {
+    width: 440px;
+  }
+
+  .mi-container {
+    width: 440px;
+    margin-bottom: 200px;
+  }
+
+  .contacto-hotel {
+    width: 475px;
+  }
+
+  footer {
+    width: 522px;
+  }
+
+  .grid-container {
+    width: 522px;
+  }
+
+  .breadcrumb {}
+}
+
+//________________/
+
+//sass --watch styles.scss styles.css
